@@ -1,0 +1,15 @@
+{
+    "name": "Webhook Example - GitHub Issue Creator",
+    "nodes": [
+          {
+                  "name": "Webhook",
+                  "type": "n8n-nodes-base.webhook",
+                  "position": [250, 300]
+          },
+          {
+                  "name": "GitHub Create Issue",
+                  "type": "n8n-nodes-base.github",
+                  "position": [450, 300]
+          }
+    ]
+}
