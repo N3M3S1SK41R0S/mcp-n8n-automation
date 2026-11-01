@@ -55,12 +55,16 @@ Infrastructure complète d'automatisation combinant **Model Context Protocol (MC
                                                                                       git clone https://github.com/N3M3S1SK41R0S/mcp-n8n-automation.git
                                                                                       cd mcp-n8n-automation
 
+                                                                                      # 1b. Secrets : les secrets ne se commitent pas : copier .env.example en .env
+                                                                                      #     (fichier exemple actuellement nommé ".env.exampleé" dans le dépôt) puis renseigner les valeurs
+                                                                                      cp ".env.exampleé" .env
+
                                                                                       # 2. Lancer les services
                                                                                       docker-compose up -d
 
                                                                                       # 3. Accéder à N8N
                                                                                       open http://localhost:5678
-                                                                                      # Login: admin / changeme123
+                                                                                      # Login: admin / (mot de passe : N8N_BASIC_AUTH_PASSWORD défini dans .env)
                                                                                       ```
 
                                                                                       ## ⚙️ Configuration MCP
@@ -99,7 +103,7 @@ Infrastructure complète d'automatisation combinant **Model Context Protocol (MC
                                                                                          5. ```
                                                                                             URL: http://localhost:5678
                                                                                             Username: admin
-                                                                                            Password: changeme123
+                                                                                            Password: CHANGE_ME (défini dans .env : N8N_BASIC_AUTH_PASSWORD)
                                                                                             ```
 
                                                                                             ### Créer un Workflow Simple
@@ -229,3 +233,7 @@ Infrastructure complète d'automatisation combinant **Model Context Protocol (MC
 - ---
 
 **Créé avec ❤️ pour automatiser tout ce qui peut l'être!**
+
+## 🔐 Secrets
+
+Les secrets ne se commitent pas : copier `.env.example` en `.env` (fichier exemple actuellement nommé `.env.exampleé` dans le dépôt), puis y renseigner les valeurs. Le fichier `.env` est ignoré par Git (voir `.gitignore`).
