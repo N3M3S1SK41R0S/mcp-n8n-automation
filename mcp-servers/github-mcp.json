@@ -33,7 +33,7 @@
                   "args": [
                             "-y",
                             "@modelcontextprotocol/server-postgres",
-                            "postgresql://n8n:n8n_password@localhost:5432/n8n"
+                            "postgresql://n8n:CHANGE_ME@localhost:5432/n8n"
                   ]
           },
           "memory": {
